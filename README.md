@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# parinaz-yousefi-watchlist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+What is your app? Brief description in a couple of sentences.
 
-In the project directory, you can run:
+Watchlist is a web app to discover and save all of your favorite movies and TV shows.
 
-### `npm start`
+### Problem
+Watvhlist is a web app to store all of your to-watch shows from all diffrent platforms and discover new ones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Who will use your app? How will they use it? Any special considerations that your app must take into account.
+-Movie enthusiasts:
+    -looking for what to watch
+    -saving all of their shows on diffrent platforms in one place 
+    -listing all of the
 
-### `npm test`
+### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-A list of saved shows/movies
+-A random movie/show generater based on genre
+-Discover list which includes top 5 latest movies/tv shows
+-Search functionallity
+-List movie/show based on selected genre
 
-### `npm run build`
+## Implementation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-React
+-Node.js
+-MySQL
+-Express
+-Client libraries:
+    -react
+    -axios
+    -react-router
+-Server libraries:
+    -knex
+    -express
+    -bcrypt for password hashing
+    -uuid
+### APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://developer.themoviedb.org/docs/getting-started
+https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/details
 
-### `npm run eject`
+### Sitemap
+-Register
+-Login
+-User watchlist
+-Random suggestion
+-Search and filter
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Mockups
+Included in watchlist folder
+### Data
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Endpoints
+**GET/3/discover/movie**
+-lists top release of the month
+**GET/3/discover/tv**
+-lists top release of the month
+**GET/3/discover/movie/:id**
+-shows info  about the movie
+**GET/3/discover/tv/:id**
+-shows info  about the show
+**GET/3/find/{external_id}**
+-searches for a movie by name,id,cast,...
+**GET/3/genre/movie/list**
+-lists all of the movies with the specific genre
+**GET/3/genre/tv/list**
+-list all of the tv shows with the specific genre
+**GET/3/genre/tv/:id**
+-id is generated randomly from selected genre
+**GET/3/genre/movie/:id**
+-id is selected randomly from selected genre
+**POST/list/:id**
+-adds the movie/tv to watchlist
+**POST/list/:id**
+--edits(delete)movie/tv from the watchlist
+**POST/user/signup**
+- Add a user account
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Parameters:
 
-## Learn More
+- email: User's email
+- name:User's name
+- password: User's provided password
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+**POST/user/login**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+- Login a user
 
-### Code Splitting
+Parameters:
+- email: User's email
+- password: User's provided password
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
 
-### Analyzing the Bundle Size
+### Auth
+- JWT auth
+    - Before adding auth, all API requests will be using a fake user with id 1
+    - Added after core features have first been implemented
+    - Store JWT in localStorage, remove when a user logs out
+    - Add states for logged in showing different UI in places listed in mockups
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Roadmap
 
-### Making a Progressive Web App
+-Create client
+    -react project with routes and boilerplates
+-Create server
+    -express project with routing,with placeholder 200 responses
+-Create migrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Deploy client and server projects so all commits will be reflected in production
 
-### Advanced Configuration
+-feature:sign up
+-feature:login
+-feature:discover
+-feature:search
+-feature:movie/tv details page
+-feature:filter genre
+-feature:random suggest 
+-feature:add to list
+-feature:remove from the list
+- Bug fixes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- DEMO DAY
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Nice-to-haves
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-The users are ables to discover each other profiles to view their lists
+-The users are ables to leave comments
