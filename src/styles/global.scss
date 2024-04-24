@@ -1,0 +1,97 @@
+@use '../partials/mixins.scss' as* ;
+@use '../partials//typography.scss' as* ;
+@use '../partials/variables.scss' as* ;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ body {
+  font-family: 'TitilliumWeb-Regular';
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+
+
+    @include tablet {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+}
+
+//labels,links, buttons
+h3 {
+  font-size: 0.813rem;
+  line-height: 1.3rem;
+
+  @include tablet {
+    font-size: 0.9rem;
+    line-height: 1.375rem;
+  }
+}
+
+//table headers
+h4 {
+  font-size: 0.688rem;
+  line-height: 1rem;
+  color: $table-headers;
+
+  @include tablet {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+//how to use different paragraph sizes in html reference:
+//<p class="small">This is a small paragraph.</p>
+//<p class="medium">This is a medium paragraph.</p>
+//<p class="large">This is a large paragraph.</p>
+
+p {
+  .small {
+    font-size: 0.688rem;
+    line-height: 1rem;
+
+    @include tablet {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  .medium {
+    font-size: 0.813rem;
+    line-height: 1.3rem;
+
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  .large {
+    font-size: 0.9rem;
+    line-height: 1.625rem;
+
+    @include tablet {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+
+  }
+}
