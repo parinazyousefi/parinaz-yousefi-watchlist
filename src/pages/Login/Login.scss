@@ -1,0 +1,10 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
