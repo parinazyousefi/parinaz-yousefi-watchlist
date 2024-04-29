@@ -1,0 +1,17 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.movie-card{
+    .poster{
+        border-radius: 0.25rem;
+        // flex: 0 0 auto; 
+        // width: 100%;
+        height: auto;
+    }
+    .movie-name{
+        align-self: center;
+
+    }
+}

@@ -1,0 +1,31 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.discover__list{
+    padding: 2rem;
+}
+
+.movies{
+    margin-top: 2rem;
+    &__list{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+}
+
+.shows{
+margin-top: 2rem;
+
+    &__list{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+}
