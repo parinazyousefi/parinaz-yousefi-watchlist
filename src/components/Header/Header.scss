@@ -8,6 +8,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
+    .title{
+        text-decoration: none;
+    }
 
     &__list{
         display: flex;

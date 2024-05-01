@@ -3,12 +3,29 @@
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/global.scss" as *;
 
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10rem;
-  @keyframes pulse {
+.movie-content{
+    padding: 2rem;
+}
+.poster{
+    padding-top:2rem ;
+    border-radius: 0.25rem;
+    height: auto;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    .movie__desc{
+        margin-top: 5rem;
+    }
+    .desc{
+        color: $headline;
+        margin-top: 0.5rem;
+    }
+    
+}
+@keyframes pulse {
     0% {
       transform: scale(1);
     }
@@ -19,18 +36,17 @@
       transform: scale(1);
     }
   }
-
-  .button {
-    color: #fffffe;
+.button{
+    width: 10rem;
+    height: 2.5rem;
     background-color: $tertiary;
+    align-self: flex-end;
     border-radius: 0.25rem;
-    width: 15rem;
-    height: 10rem;
     animation: pulse 2s infinite;
+    padding: 0 0.5rem;
     cursor: pointer;
     &:hover{
         background-color: darken(#e53170, 10%);
 
     }
-  }
 }

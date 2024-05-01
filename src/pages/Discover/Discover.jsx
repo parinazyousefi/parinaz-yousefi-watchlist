@@ -1,13 +1,17 @@
-import "./Discover.scss";
 import Header from "../../components/Header/Header";
 import DiscoverList from "../../components/DiscoverList/DiscoverList";
 import { api_key, api_url } from "../../utils.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Search from "../../components/Search/Search.jsx";
 
 const Discover = () => {
-  const [movies, setMovies] = useState([ ]);
-  const [shows, setShows] = useState([ ]);
+  const [movies, setMovies] = useState([]);
+  const [shows, setShows] = useState([]);
+  const [genres, setGenres] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
     const getMovies = async () => {
       try {
@@ -20,18 +24,40 @@ const Discover = () => {
         const moviesData = reqMovies.data;
         const moviesShow = reqShows.data;
         console.log(moviesData.results);
-        setMovies(moviesData.results.slice(0,4));
-        setShows(moviesShow.results.slice(0,4));
+        setMovies(moviesData.results.slice(0, 4));
+        setShows(moviesShow.results.slice(0, 4));
       } catch (error) {
         console.log("sorry cant get the data from api", error);
       }
-    };getMovies();
-  },[]);
+    };
+    getMovies();
+    fetchGenres(); // Fetch genres data
+  }, []);
+
+  const fetchGenres = async () => {
+    try {
+      const response = await axios.get(
+        `${api_url}/genre/movie/list?api_key=${api_key}&language=en-US`
+      );
+      const data = response.data;
+      setGenres(data.genres);
+    } catch (error) {
+      console.log("Error fetching genres:", error);
+      setGenres([]);
+    }
+  };
+
+  const redirectToSearchPage = () => {
+    navigate("/auth/search");
+  };
+
   return (
     <div className="discover">
       <Header />
+      <Search genres={genres} /> {/* Pass genres prop to Search component */}
       <DiscoverList movies={movies} shows={shows} />
     </div>
   );
 };
+
 export default Discover;

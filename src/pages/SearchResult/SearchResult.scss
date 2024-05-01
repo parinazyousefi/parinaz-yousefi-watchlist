@@ -3,8 +3,16 @@
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/global.scss" as *;
 
-.sign-up{
+.search-result{
+    padding: 0 2rem;
+}
+.search-bar{
+    padding:2rem;
+}
+
+.result__list{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }

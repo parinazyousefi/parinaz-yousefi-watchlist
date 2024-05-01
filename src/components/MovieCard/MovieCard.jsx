@@ -1,5 +1,5 @@
 import "./MovieCard.scss";
-import sample from "../../assets/images/sample.jpg";
+
 
 const MovieCard = ({ movie }) => {
     const baseImageUrl = "https://image.tmdb.org/t/p/";

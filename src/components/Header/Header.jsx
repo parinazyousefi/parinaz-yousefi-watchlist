@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 const Header=()=>{
     return(
         <div className="header">
-            <h1>WATCHLIST</h1>
+            <Link to='/auth/discover'>
+            <h1 className='title'>WATCHLIST</h1>
+            </Link>
             <ul className='header__list'>
                 <Link to='/auth/discover' className='header__item'>Search</Link>
                 <Link to='/auth/surprise' className='header__item'>Surprise Me!</Link>

@@ -1,5 +1,6 @@
 import "./DiscoverList.scss";
 import MovieCard from "../MovieCard/MovieCard";
+import { Link } from "react-router-dom";
 
 const DiscoverList = ({ movies,shows }) => {
   return (
@@ -9,7 +10,9 @@ const DiscoverList = ({ movies,shows }) => {
         <h3 className="movies__title">Movies</h3>
         <div className="movies__list">
           {movies.map((movie) => {
-            return <MovieCard movie={movie} key={movie.id} />;
+            return <Link to={`/auth/movie/${movie.id}`}key={movie.id}>
+            <MovieCard movie={movie} key={movie.id} />
+            </Link>
           })}
         </div>
       </div>
@@ -17,7 +20,9 @@ const DiscoverList = ({ movies,shows }) => {
         <h3 className="shows__title">Shows</h3>
         <div className="shows__list">
         {shows.map((movie) => {
-            return <MovieCard movie={movie} key={movie.id} />;
+            return<Link to={`/auth/show/${movie.id}`} key={movie.id}>
+             <MovieCard movie={movie} key={movie.id} />
+            </Link>
           })}
         </div>
       </div>

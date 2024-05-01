@@ -1,0 +1,23 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.movie-content{
+    padding: 2rem;
+}
+.poster{
+    padding-top:2rem ;
+    border-radius: 0.25rem;
+    height: auto;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    .desc{
+        // margin-top: 2rem;
+        color: $headline;
+    }
+}
