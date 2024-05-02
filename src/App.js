@@ -5,6 +5,7 @@ import Discover from './pages/Discover/Discover';
 import Movie from './pages/Movie/Movie';
 import Show from './pages/Show/Show';
 import SearchResult from './pages/SearchResult/SearchResult';
+import Surprise from './pages/Surprise/Surprise';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<LoginPage/>}/>
         <Route path='/auth/discover' element={<Discover/>}/>
         <Route path='/auth/search' element={<SearchResult/>}/>
+        <Route path='/auth/surprise' element={<Surprise/>}/>
         <Route path='/auth/movie/:movieId' element={<Movie/>}/>
         <Route path='/auth/tv/:showId' element={<Show/>}/>
       </Routes>
