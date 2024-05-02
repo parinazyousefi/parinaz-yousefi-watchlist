@@ -5,9 +5,11 @@
 
 .search-result{
     padding: 0 2rem;
+    
 }
-.search-bar{
-    padding:2rem;
+.find{
+    display: flex;
+    flex-direction: row;
 }
 
 .result__list{
@@ -15,4 +17,52 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
+}
+
+.search-bar{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    .search-form{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .search{
+        border: 3px solid $paragraph;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+        padding: 0 0.5rem;
+    }
+   
+
+}
+.filter-bar{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    .filter-form{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .filter{
+        border: 3px solid $paragraph;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+        padding: 0 0.5rem;
+
+        option:checked{
+            background-color:$tertiary;
+        }
+        option:hover{
+            background-color:$tertiary;
+        }
+
+    }
 }

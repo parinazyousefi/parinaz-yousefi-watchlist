@@ -54,7 +54,7 @@ const Discover = () => {
   return (
     <div className="discover">
       <Header />
-      <Search genres={genres} /> {/* Pass genres prop to Search component */}
+      <Search genres={genres} isDiscover={true}/> {/* Pass genres prop to Search component */}
       <DiscoverList movies={movies} shows={shows} />
     </div>
   );

@@ -20,7 +20,7 @@ const DiscoverList = ({ movies,shows }) => {
         <h3 className="shows__title">Shows</h3>
         <div className="shows__list">
         {shows.map((movie) => {
-            return<Link to={`/auth/show/${movie.id}`} key={movie.id}>
+            return<Link to={`/auth/tv/${movie.id}`} key={movie.id}>
              <MovieCard movie={movie} key={movie.id} />
             </Link>
           })}

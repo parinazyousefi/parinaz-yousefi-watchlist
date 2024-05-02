@@ -15,7 +15,7 @@ function App() {
         <Route path='/auth/discover' element={<Discover/>}/>
         <Route path='/auth/search' element={<SearchResult/>}/>
         <Route path='/auth/movie/:movieId' element={<Movie/>}/>
-        <Route path='/auth/show/:showId' element={<Show/>}/>
+        <Route path='/auth/tv/:showId' element={<Show/>}/>
       </Routes>
       </BrowserRouter>
 
