@@ -25,7 +25,7 @@ const Surprise = () => {
       }
     };
     fetchGenres();
-  });
+  },[]);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -85,7 +85,7 @@ const Surprise = () => {
       </div>
       <div className="random-result" key={result ? result.id : 'default'}>
         <Link to={`/auth/${selectedCategory}/${result.id}`}>
-       <MovieCard movie={result} className='item'/>
+       <MovieCard movie={result} className='movie-card'/>
        </Link>
       </div>
     </div>
