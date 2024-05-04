@@ -6,6 +6,7 @@ import Movie from './pages/Movie/Movie';
 import Show from './pages/Show/Show';
 import SearchResult from './pages/SearchResult/SearchResult';
 import Surprise from './pages/Surprise/Surprise';
+import Mylist from './pages/Mylist/Mylist';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/auth/discover' element={<Discover/>}/>
         <Route path='/auth/search' element={<SearchResult/>}/>
         <Route path='/auth/surprise' element={<Surprise/>}/>
+        <Route path='/auth/myList' element={<Mylist/>}/>
         <Route path='/auth/movie/:movieId' element={<Movie/>}/>
         <Route path='/auth/tv/:showId' element={<Show/>}/>
       </Routes>

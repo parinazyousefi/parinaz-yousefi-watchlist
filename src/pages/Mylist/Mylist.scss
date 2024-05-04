@@ -1,0 +1,28 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.watchlist{
+    padding: 2rem;
+    &__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .filter{
+        border: 3px solid $paragraph;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+        padding: 0 0.5rem;
+
+        option:checked{
+            background-color:$tertiary;
+        }
+        option:hover{
+            background-color:$tertiary;
+        }
+
+    }
+}

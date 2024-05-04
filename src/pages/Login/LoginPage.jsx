@@ -30,7 +30,7 @@ const LoginPage = () => {
   return (
     <div className='login'>
       {error && <p className="error">{error}</p>}
-      <button onClick={generateRequestToken} disabled={loading}>Connect to TMBD</button>
+      <button className='button' onClick={generateRequestToken} disabled={loading}>Connect to TMBD</button>
       {loading && <p>Loading...</p>}
     </div>
   );

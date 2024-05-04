@@ -76,10 +76,7 @@ const Discover = () => {
     }
   };
 
-  const redirectToSearchPage = () => {
-    navigate("/auth/search");
-  };
-
+  
   return (
     <div className="discover">
       <Header />
