@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Header=()=>{
     return(
         <div className="header">
-            <Link to='/auth/discover'>
+            <Link to='/auth/discover' className='title'>
             <h1 className='title'>WATCHLIST</h1>
             </Link>
             <ul className='header__list'>

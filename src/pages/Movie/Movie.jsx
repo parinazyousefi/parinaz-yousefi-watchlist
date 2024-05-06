@@ -47,6 +47,30 @@ const Movie = () => {
     }
   };
 
+  const handleDeteleFromFavorite=async()=>{
+    try {
+      // Get account ID from localStorage or wherever it's stored
+      const sessionId = localStorage.getItem("sessionId");
+      if (!sessionId) {
+        console.log("session ID not found.");
+        return;
+      }
+
+      const response = await axios.post(
+        `${api_url}/account/21244892/watchlist?session_id=${sessionId}&api_key=${api_key}`,
+        {
+          media_type: "movie",
+          media_id: movieId,
+          watchlist: false,
+        }
+      );
+      console.log("Movie added to watchlist:", response.data);
+    } catch (error) {
+      console.log("Couldn't add the movie to the watchlist.", error);
+    }
+
+  }
+
   const baseImageUrl = "https://image.tmdb.org/t/p/";
   const posterSize = "w300"; // Choose the desired poster size
   const imageUrl = `${baseImageUrl}${posterSize}${movie.poster_path}`;
@@ -77,6 +101,9 @@ const Movie = () => {
           </div>
           <button className="button" onClick={handleAddtoFavorite}>
             Add to watchlist
+          </button>
+          <button className="button-delete" onClick={handleDeteleFromFavorite}>
+            Delete from watchlist
           </button>
         </div>
       </div>

@@ -50,3 +50,18 @@
 
     }
 }
+.button-delete{
+  font-size: 0.6rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: $button;
+  align-self: flex-end;
+  border-radius: 0.25rem;
+  animation: pulse 2s infinite;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  &:hover{
+      background-color: darken(#e53170, 10%);
+
+  }
+}

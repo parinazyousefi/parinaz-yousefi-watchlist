@@ -56,7 +56,7 @@ const Discover = () => {
       const moviesData = reqMovies.data;
       const moviesShow = reqShows.data;
       console.log(moviesData.results);
-      setMovies(moviesData.results.slice(0, 4));
+      setMovies(moviesData.results.slice(0,4));
       setShows(moviesShow.results.slice(0, 4));
     } catch (error) {
       console.log("sorry cant get the data from api", error);
