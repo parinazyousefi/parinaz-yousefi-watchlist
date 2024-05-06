@@ -1,0 +1,11 @@
+@use "../../styles/typography.scss" as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/global.scss" as *;
+
+.footer{
+    color: $paragraph;
+    text-align: center;
+    margin-top: 20rem;
+    padding: 0 2rem;
+}

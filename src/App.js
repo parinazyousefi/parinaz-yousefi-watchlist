@@ -7,6 +7,7 @@ import Show from './pages/Show/Show';
 import SearchResult from './pages/SearchResult/SearchResult';
 import Surprise from './pages/Surprise/Surprise';
 import Mylist from './pages/Mylist/Mylist';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path='/auth/tv/:showId' element={<Show/>}/>
       </Routes>
       </BrowserRouter>
+      <Footer/>
+
 
       
     </div>
