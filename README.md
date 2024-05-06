@@ -20,28 +20,28 @@ Watchlist addresses the need for a centralized platform where users can store al
 
 ## Implementation
 **Tech Stack**
-  React
-  Client Libraries:
-    React
-    Axios
-    React Router
+-  React
+ -  Client Libraries:
+  -   React
+   -  Axios
+   -  React Router
 
 ### APIs
 
-  The project utilizes The Movie Database (TMDb) API for fetching movie and TV show data.
-    https://developer.themoviedb.org/docs/getting-started
-    https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/details
+-  The project utilizes The Movie Database (TMDb) API for fetching movie and TV show data.
+  -  https://developer.themoviedb.org/docs/getting-started
+  -  https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/details
 
 ### Sitemap
-**Login to TMDb:** Allows users to authenticate and access their watchlist.
-**User Watchlist:** Displays the user's saved shows and movies.
-**Random Suggestion:** Generates a random movie or show suggestion based on genre.
-**Search and Filter:** Enables users to search for and filter movies and TV shows.
+-  **Login to TMDb:** Allows users to authenticate and access their watchlist.
+-  **User Watchlist:** Displays the user's saved shows and movies.
+-  **Random Suggestion:** Generates a random movie or show suggestion based on genre.
+-  **Search and Filter:** Enables users to search for and filter movies and TV shows.
 
 ### Mockups
-  Mockups for the project can be found in the watchlist folder.
+-  Mockups for the project can be found in the watchlist folder.
 ### Data
-  The project fetches data from the TMDb API, including information about movies, TV shows, genres, and user watchlists.
+-  The project fetches data from the TMDb API, including information about movies, TV shows, genres, and user watchlists.
 
 ### Endpoints
 **GET/3/discover/movie**
@@ -69,22 +69,22 @@ Watchlist addresses the need for a centralized platform where users can store al
 ### Auth
   The project includes authentication functionality for user login using their tmdb account.
 ## Roadmap
-  Create client:
-    Set up a React project with routes and boilerplates.
-    Develop the login page to store requested tokens.
-    Deploy client and server projects so all commits are reflected in production.
-  Features:
-    Sign up functionality.
-    Discover feature to explore new content.
-    Implement search functionality.
-    Develop movie/TV show details pages.
-    Add genre filtering.
-    Implement random suggestion feature.
-    Add functionality to add/remove from the watchlist.
-  Bug fixes.
-  Demo Day.
+-  Create client:
+  -   Set up a React project with routes and boilerplates.
+  -  Develop the login page to store requested tokens.
+  -  Deploy client and server projects so all commits are reflected in production.
+-  Features:
+  -  Sign up functionality.
+  -  Discover feature to explore new content.
+  -  Implement search functionality.
+  -  Develop movie/TV show details pages.
+  -  Add genre filtering.
+  -  Implement random suggestion feature.
+  -  Add functionality to add/remove from the watchlist.
+-  Bug fixes.
+-  Demo Day.
 
 ## Nice-to-haves
 
-  Users can discover each other's profiles to view their watchlists.
-  Users can leave comments on movies and TV shows.
+-  Users can discover each other's profiles to view their watchlists.
+-  Users can leave comments on movies and TV shows.
