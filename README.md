@@ -12,11 +12,11 @@ Watchlist addresses the need for a centralized platform where users can store al
 -  Users who want to save all their shows from different platforms in one place.
 
 ### Features
-**Saved Shows/Movies List**: Users can view a list of all their saved shows and movies.
-**Random Movie/Show Generator:** Users can generate random movie or show suggestions based on genre.
-**Discover List:** Users can discover trending movies and TV shows.
-**Search Functionality:** Users can search for specific movies or TV shows.
-**Genre Filtering:** Users can filter movies and shows based on selected genres.
+-  **Saved Shows/Movies List**: Users can view a list of all their saved shows and movies.
+-  **Random Movie/Show Generator:** Users can generate random movie or show suggestions based on genre.
+-  **Discover List:** Users can discover trending movies and TV shows.
+-  **Search Functionality:** Users can search for specific movies or TV shows.
+-  **Genre Filtering:** Users can filter movies and shows based on selected genres.
 
 ## Implementation
 **Tech Stack**

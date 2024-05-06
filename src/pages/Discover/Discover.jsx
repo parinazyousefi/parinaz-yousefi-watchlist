@@ -25,14 +25,13 @@ const Discover = () => {
         const existingSessionId = localStorage.getItem('sessionId');
         console.log(existingSessionId);
         if (!existingSessionId) {
-          // Generate session ID
+          // Generate session ID if it doesnt exist 
           const response = await axios.post(`${api_url}/authentication/session/new?api_key=${api_key}`, {
             request_token: requestToken,
           });
           const sessionId = response.data.session_id;
           // Save session ID to local storage
           localStorage.setItem('sessionId', sessionId);
-          console.log(sessionId);
         }
       } catch (error) {
         // Handle errors

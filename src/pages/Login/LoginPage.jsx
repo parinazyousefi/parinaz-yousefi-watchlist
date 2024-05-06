@@ -1,14 +1,13 @@
 import './Login.scss';
-import Button from '../../components/Button/Button';
 import axios from 'axios';
 import { api_key, api_url } from '../../utils';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+ 
 
   const generateRequestToken = async () => {
     try {
