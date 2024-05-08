@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link} from "react-router-dom";
 import { api_key, api_url } from "../../utils";
 import MovieCard from "../../components/MovieCard/MovieCard";
+import defaultImage from '../../assets/images/default.png'
 
 const Surprise = () => {
   const [selectedCategory, setSelectedCategory] = useState("movie");
@@ -84,9 +85,11 @@ const Surprise = () => {
         </button>
       </div>
       <div className="random-result" key={result ? result.id : 'default'}>
-        <Link to={`/auth/${selectedCategory}/${result.id}`}>
-       <MovieCard movie={result} className='movie-card'/>
-       </Link>
+      {result && (
+          <Link to={`/auth/${selectedCategory}/${result.id}`}>
+            <MovieCard movie={result} className='movie-card' default={defaultImage}/>
+          </Link>
+        )}
       </div>
     </div>
   );
