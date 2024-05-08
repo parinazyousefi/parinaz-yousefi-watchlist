@@ -8,14 +8,15 @@ import { Link } from "react-router-dom";
 
 const Mylist = () => {
   const [watchlist, setWatchlist] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("movies");
+  const [selectedCategory, setSelectedCategory] = useState("movie");
 
   useEffect(() => {
     const getWatchlist = async () => {
       try {
         const sessionId = localStorage.getItem("sessionId");
+        const categoryEndpoint = selectedCategory === "movie" ? "movies" : "tv";
         const reqWatchlist = await axios.get(
-          `${api_url}/account/21244892/watchlist/${selectedCategory}?session_id=${sessionId}&api_key=${api_key}`
+          `${api_url}/account/21244892/watchlist/${categoryEndpoint}?session_id=${sessionId}&api_key=${api_key}`
         );
         console.log(`watchlist ${selectedCategory}`, reqWatchlist.data.results);
         setWatchlist(reqWatchlist.data.results);
@@ -40,7 +41,7 @@ const Mylist = () => {
         value={selectedCategory}
         onChange={handleCategoryChange}
       >
-        <option value="movies">Movie</option>
+        <option value="movie">Movie</option>
         <option value="tv">TV</option>
       </select>
       <ul className="watchlist__list">
